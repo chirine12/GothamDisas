@@ -21,7 +21,7 @@ class TenteController extends AbstractController
         ]);
     }
     #[Route('/tentes', name: 'list_tente')]
-    public function list(TenteRepository $victimeRepository): Response
+    public function list(TenteRepository $TenteRepository): Response
     {
         $tentes = $TenteRepository->findAll();
 

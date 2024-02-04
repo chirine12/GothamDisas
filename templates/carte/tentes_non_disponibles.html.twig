@@ -1,0 +1,23 @@
+{# Exemple de template Twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div id="map"></div>
+    <!-- Inclusion des fichiers Leaflet depuis des fichiers locaux -->
+    <link rel="stylesheet" href="{{ asset('css/leaflet.css') }}" />
+    <script src="{{ asset('js/leaflet.js') }}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Page chargée');
+            var map = L.map('map').setView([51.505, -0.09], 13);
+
+            {% for tente in tentesNonDisponibles %}
+                console.log('Tente:', {{ tente|json_encode|raw }});
+                L.marker([{{ tente.latitude }}, {{ tente.longitude }}]).addTo(map)
+                    .bindPopup("Tente non disponible : {{ tente.nom }}");
+            {% endfor %}
+        });
+    </script>
+{% endblock %}

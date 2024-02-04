@@ -1,0 +1,16 @@
+<table border="1">
+<tr>
+<td>id</td> <td> Capacite</td> <td> nbrvictimes </td> <td> disponibilité </td> <td> Nom</td>
+<tr>
+{% for tente in tentes %}
+<tr>
+ <td>{{tente.id}} </td>
+ <td>{{tente.capacite}} </td>
+  <td>{{tente.nbrperso}} </td>
+  <td>{{tente.disponibilite}} </td>
+   <td>{{tente.nom}} </td>
+  
+  </td>
+
+ </tr>
+{% endfor %}

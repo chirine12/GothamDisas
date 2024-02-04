@@ -1,0 +1,16 @@
+<table border="1">
+<tr>
+<td>id</td> <td> Username </td> <td> email </td> <td> NumberOfBooks </td> <td> Actions</td>
+<tr>
+{% for victime in victimes %}
+<tr>
+ <td>{{victime.id}} </td>
+ <td>{{victime.nom}} </td>
+  <td>{{victime.prenom}} </td>
+  <td>{{victime.age}} </td>
+   <td>{{victime.besoin}} </td>
+  
+  </td>
+
+ </tr>
+{% endfor %}

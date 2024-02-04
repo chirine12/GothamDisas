@@ -64,7 +64,7 @@
     <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ path('indexe') }}" class="smoothScroll">Home</a></li>
         <li><a href="{{ path('indexe') }}" class="smoothScroll">About Us</a></li>
-        <li class="appointment-btn"><a href="{{ path('indexe') }}">login as amdmin</a></li>
+        <li class="appointment-btn"><a href="{{ path('admin_auth') }}">login as admin</a></li>
     </ul>
 </div>
 
@@ -83,7 +83,7 @@
                                         <div class="col-md-offset-1 col-md-10">
                                           
                                              <h1>Dear administrator</h1>
-                                             <a href="login.html.twig" class="section-btn btn btn-default smoothScroll">login</a>
+                                             <a href="{{ path('admin_auth') }}" class="section-btn btn btn-default smoothScroll">login</a>
                                         </div>
                                    </div>
                               </div>
